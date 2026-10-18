@@ -3,68 +3,400 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0a12">
-  <meta name="description" content="NOVA is a free 3D creation studio for modelling, sculpting and optimising your ideas. Windows-first and built for creators.">
-  <title>NOVA — 3D Creation Studio</title>
+  <meta name="theme-color" content="#0a090f">
+  <meta name="description" content="NOVA 3D Creation Studio is a free 3D modelling application in development — designed for beginners and experienced creators. Create anything. Optimise everything.">
+  <meta property="og:title" content="NOVA 3D Creation Studio">
+  <meta property="og:description" content="Create anything. Optimise everything. A free 3D creation studio, currently in development.">
+  <meta property="og:type" content="website">
+  <title>NOVA 3D Creation Studio — Create anything. Optimise everything.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="NOVA home">
-      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 3.5 36.5 13v14L20 36.5 3.5 27V13L20 3.5Z"/><path d="m20 10 9 5.2v9.6L20 30l-9-5.2v-9.6L20 10Z"/><path d="M20 3.5V10m16.5 3L29 15.2M36.5 27 29 24.8M20 36.5V30M3.5 27l7.5-2.2M3.5 13l7.5 2.2"/></svg></span>
-      <span class="brand-name">NOVA<span class="brand-sub">3D CREATION STUDIO</span></span>
-    </a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#features">Features</a><a href="#roadmap">Roadmap</a><a href="#about">About</a>
-      <a class="nav-cta" href="#updates">Get updates <span aria-hidden="true">↗</span></a>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Navigation ============ -->
+  <header class="site-header" data-header>
+    <div class="header-inner container">
+      <a class="brand" href="#top" aria-label="NOVA 3D Creation Studio — back to top">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 34 12v16L20 36 6 28V12L20 4Z"/><path class="brand-mark-core" d="M20 12.5 27 16.5v8L20 28.5l-7-4v-8L20 12.5Z"/><path d="M20 4v8.5M34 12l-7 4.5M34 28l-7-3.5M20 36v-7.5M6 28l7-3.5M6 12l7 4.5"/></svg>
+        <span class="brand-text">NOVA<span class="brand-sub">3D Creation Studio</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu" data-menu-toggle>
+        <span class="menu-toggle-bar"></span><span class="menu-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-nav>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#features">Features</a></li>
+          <li><a class="nav-link" href="#roadmap">Roadmap</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+        </ul>
+        <a class="button button-primary button-sm nav-cta" href="#updates">Development Updates</a>
+      </nav>
+    </div>
   </header>
-  <main id="home">
-    <section class="hero section-wrap">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="status-dot"></span> A NEW CREATIVE TOOL IS TAKING SHAPE</div>
-        <h1>Your ideas.<br><span class="gradient-text">Without limits.</span></h1>
-        <p class="hero-lede">A free 3D creation studio for making, shaping and optimising the things you imagine.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#updates">Follow development <span aria-hidden="true">↗</span></a>
-          <a class="button button-quiet" href="#features"><span class="play-icon" aria-hidden="true">↓</span> Explore NOVA</a>
+
+  <main id="main">
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badge"><span class="badge-dot" aria-hidden="true"></span>In development</p>
+          <h1 class="hero-title" id="hero-title">Create anything.<br><span class="text-gradient">Optimise everything.</span></h1>
+          <p class="hero-lede">NOVA 3D Creation Studio is a free 3D creation studio designed for beginners taking their first steps and experienced creators who need room to go further.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#updates">Follow Development
+              <svg class="button-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+            <a class="button button-secondary" href="#features">Explore Features</a>
+          </div>
+          <ul class="hero-meta" aria-label="Project notes">
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.2 7 2.5v5H2zM8 2.4l6-.9v6H8zM2 8.5h5v5l-5-.7zM8 8.5h6v6l-6-.9z"/></svg>Windows-first development</li>
+            <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 14 4.5v7L8 14.5 2 11.5v-7z" fill="none"/><path d="m5.2 8.2 1.9 1.9 3.8-4" fill="none"/></svg>Core features intended to stay free</li>
+          </ul>
         </div>
-        <div class="hero-note"><span class="tiny-star">✦</span> Windows first <span class="note-divider">/</span> Core features planned to stay free</div>
+
+        <div class="hero-visual" role="img" aria-label="Concept illustration: a wireframe sphere rotating slowly inside a NOVA viewport">
+          <div class="viewport" data-tilt aria-hidden="true">
+            <div class="viewport-bar">
+              <div class="viewport-tabs"><span class="is-active">Perspective</span><span>Wireframe</span><span>Shaded</span></div>
+              <span class="viewport-tag">Concept UI</span>
+            </div>
+            <div class="viewport-stage">
+              <div class="viewport-floor"></div>
+              <div class="viewport-glow"></div>
+              <ul class="viewport-tools">
+                <li class="is-active"><svg viewBox="0 0 16 16"><path d="M3 2.5 12.5 7 8 8.2 6.2 13z"/></svg></li>
+                <li><svg viewBox="0 0 16 16"><path d="M8 1.5v13M1.5 8h13M8 1.5 6 3.5M8 1.5l2 2M14.5 8l-2-2M14.5 8l-2 2"/></svg></li>
+                <li><svg viewBox="0 0 16 16"><path d="M13 8a5 5 0 1 1-1.5-3.6M13 2v3h-3"/></svg></li>
+                <li><svg viewBox="0 0 16 16"><path d="M2.5 13.5h6v-6h-6zM8.5 7.5l5-5M10 2.5h3.5V6"/></svg></li>
+              </ul>
+              <svg class="mesh" viewBox="-160 -160 320 320" data-mesh>
+                <defs>
+                  <radialGradient id="mesh-core" cx="40%" cy="35%" r="70%">
+                    <stop offset="0" stop-color="#a78bfa" stop-opacity=".35"/>
+                    <stop offset="1" stop-color="#1e1538" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <circle r="118" fill="url(#mesh-core)"/>
+                <ellipse class="mesh-orbit" rx="150" ry="38" transform="rotate(-14)"/>
+                <g data-mesh-faces></g>
+                <g data-mesh-edges></g>
+                <g data-mesh-verts></g>
+              </svg>
+              <svg class="viewport-gizmo" viewBox="0 0 60 60">
+                <circle cx="30" cy="30" r="27"/>
+                <path class="g-x" d="M30 30h20"/><path class="g-y" d="M30 30V10"/><path class="g-z" d="m30 30-13 11"/>
+                <text x="52" y="33">X</text><text x="27" y="8">Y</text><text x="9" y="50">Z</text>
+              </svg>
+              <div class="viewport-readout">
+                <span>Icosphere</span><span>42 verts</span><span>80 faces</span>
+              </div>
+            </div>
+            <div class="viewport-status">
+              <span><i class="status-led"></i>Object mode</span>
+              <span>Selection 1 face</span>
+              <span class="viewport-status-end">Illustration — not final UI</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="hero-art" aria-label="Abstract 3D geometric shapes in a purple-lit studio">
-        <div class="art-grid"></div><div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div>
-        <div class="floating-label label-top"><span class="label-dot"></span> CREATIVE MODE <b>01</b></div>
-        <div class="shape shape-cube"><span></span></div>
-        <div class="shape shape-sphere"></div>
-        <div class="shape shape-ring"></div>
-        <div class="shape shape-crystal"></div>
-        <div class="art-cross cross-one">+</div><div class="art-cross cross-two">✳</div>
-        <div class="floating-label label-bottom"><span class="mini-bars"><i></i><i></i><i></i><i></i></span> BUILT FOR YOUR WORKFLOW</div>
-      </div>
-      <div class="hero-scroll"><span></span> SCROLL TO EXPLORE</div>
     </section>
-    <section class="ticker" aria-label="NOVA focus areas"><div class="ticker-track"><span>MODELLING</span><i>✦</i><span>SCULPTING</span><i>✦</i><span>OPTIMISATION</span><i>✦</i><span>CREATIVE FREEDOM</span><i>✦</i><span>MODELLING</span><i>✦</i><span>SCULPTING</span><i>✦</i><span>OPTIMISATION</span><i>✦</i><span>CREATIVE FREEDOM</span><i>✦</i></div></section>
-    <section class="features section-wrap" id="features">
-      <div class="section-heading"><div><div class="eyebrow">THE CREATIVE TOOLKIT</div><h2>Big ideas need<br><span class="muted-heading">room to grow.</span></h2></div><p>NOVA is being planned around a simple idea: powerful tools should feel approachable, and the essentials should be available to everyone.</p></div>
-      <div class="feature-grid">
-        <article class="feature-card feature-main"><div class="card-top"><span class="feature-number">01 / CREATE</span><span class="feature-icon">◇</span></div><div class="mini-viewport"><div class="viewport-axis axis-x"></div><div class="viewport-axis axis-y"></div><div class="mini-object"></div><div class="mini-cursor"></div></div><h3>Model your world</h3><p>Start with simple shapes, then build toward detailed hard-surface and organic creations.</p><span class="card-tag">MODELLING · EDITING</span></article>
-        <article class="feature-card"><div class="card-top"><span class="feature-number">02 / REFINE</span><span class="feature-icon">✳</span></div><div class="card-visual sculpt-visual"><div class="sculpt-sphere"></div><span class="visual-spark">✦</span></div><h3>Shape every detail</h3><p>Planned sculpting and material tools to help turn rough ideas into finished work.</p><span class="card-tag">SCULPT · MATERIALS</span></article>
-        <article class="feature-card"><div class="card-top"><span class="feature-number">03 / OPTIMISE</span><span class="feature-icon">⌁</span></div><div class="card-visual graph-visual"><div class="graph-line"></div><div class="graph-stats"><span>POLY COUNT</span><b>INSIGHTS</b></div><div class="graph-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><h3>Work smarter</h3><p>Understand mesh complexity and explore ways to improve performance without losing control.</p><span class="card-tag">MESH ANALYSIS · WORKFLOW</span></article>
-        <article class="feature-card"><div class="card-top"><span class="feature-number">04 / EXTEND</span><span class="feature-icon">⌘</span></div><div class="card-visual extension-visual"><div class="extension-tile tile-a">N</div><div class="extension-tile tile-b">✦</div><div class="extension-tile tile-c">＋</div></div><h3>Make it your own</h3><p>A future extension ecosystem could bring in new tools, brushes and creator-made add-ons.</p><span class="card-tag">EXTENSIONS · COMMUNITY</span></article>
+
+    <!-- ============ Features ============ -->
+    <section class="section features" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow">Features</p>
+            <h2 class="section-title" id="features-title">One studio for the whole<br class="br-desktop"> creative pipeline.</h2>
+          </div>
+          <div class="section-head-aside">
+            <p>From the first primitive to an optimised final asset. These are the areas NOVA is being designed around — each is marked with where it currently stands.</p>
+            <ul class="status-legend" aria-label="Status legend">
+              <li><span class="status status-active">In development</span></li>
+              <li><span class="status status-planned">Planned</span></li>
+              <li><span class="status status-future">Future</span></li>
+            </ul>
+          </div>
+        </header>
+
+        <div class="feature-grid">
+          <article class="feature feature-wide reveal">
+            <div class="feature-body">
+              <div class="feature-meta"><span class="feature-index">01</span><span class="status status-active">Foundation in development</span></div>
+              <h3 class="feature-title">3D Modelling</h3>
+              <p>Build, shape and edit hard-surface and organic models. Work on the viewport, primitives, selection and transforms has begun; full modelling tools are planned to follow.</p>
+              <ul class="feature-points">
+                <li>Primitives, selection &amp; transforms</li>
+                <li>Edit modes for vertices, edges and faces <em>(planned)</em></li>
+                <li>Hard-surface and organic workflows <em>(planned)</em></li>
+              </ul>
+            </div>
+            <figure class="feature-art" aria-hidden="true">
+              <svg viewBox="0 0 520 300">
+                <defs>
+                  <linearGradient id="m-top" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b2a6b"/><stop offset="1" stop-color="#241a44"/></linearGradient>
+                  <linearGradient id="m-left" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d1636"/><stop offset="1" stop-color="#120e22"/></linearGradient>
+                  <linearGradient id="m-right" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1f4d"/><stop offset="1" stop-color="#17112b"/></linearGradient>
+                  <radialGradient id="m-org" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#6d5bd0" stop-opacity=".55"/><stop offset=".6" stop-color="#2a1f4d" stop-opacity=".5"/><stop offset="1" stop-color="#120e22" stop-opacity=".2"/></radialGradient>
+                </defs>
+                <!-- hard-surface cube with extruded face -->
+                <g class="art-line">
+                  <path d="M169 145 230 180v70l-61-35z" fill="url(#m-left)"/>
+                  <path d="M230 180 291 145v70l-61 35z" fill="url(#m-right)"/>
+                  <path d="M230 110 291 145 230 180 169 145z" fill="url(#m-top)"/>
+                  <path class="art-dash" d="m169 180 61 35 61-35"/>
+                  <path d="M200 145 230 162v-45l-30-17z" fill="url(#m-left)"/>
+                  <path d="M230 162 260 145v-45l-30 17z" fill="url(#m-right)"/>
+                </g>
+                <path class="art-select" d="M230 83 260 100 230 117 200 100z"/>
+                <g class="art-vert"><circle cx="230" cy="83" r="3.2"/><circle cx="260" cy="100" r="3.2"/><circle cx="230" cy="117" r="3.2"/><circle cx="200" cy="100" r="3.2"/></g>
+                <g class="art-gizmo"><path d="M230 100V36"/><path d="m224 44 6-10 6 10z" class="art-gizmo-head"/></g>
+                <!-- organic form -->
+                <g transform="translate(405 168)">
+                  <path d="M-58 4C-62-38-26-66 8-60c36 6 56 34 50 68-6 36-38 58-70 52-28-5-44-28-46-56z" fill="url(#m-org)" class="art-line"/>
+                  <path class="art-wire" d="M-58 4c30 10 80 10 108 4M-44-34c26 10 70 12 96 8M-36 46c22 6 54 6 76-2M8-60c-14 30-16 80-8 120M-30-52c-10 34-8 76 6 106M38-44c4 30 2 64-12 98"/>
+                </g>
+                <g class="art-label"><text x="230" y="284" text-anchor="middle">HARD-SURFACE</text><text x="405" y="284" text-anchor="middle">ORGANIC</text></g>
+              </svg>
+            </figure>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature-body">
+              <div class="feature-meta"><span class="feature-index">02</span><span class="status status-planned">Planned</span></div>
+              <h3 class="feature-title">Sculpting &amp; Materials</h3>
+              <p>Planned tools for sculpting, materials and texture painting — for turning rough forms into finished, surfaced work.</p>
+            </div>
+            <figure class="feature-art" aria-hidden="true">
+              <svg viewBox="0 0 360 240">
+                <defs>
+                  <radialGradient id="s-ball" cx="36%" cy="30%" r="78%"><stop offset="0" stop-color="#8f7cf0"/><stop offset=".45" stop-color="#3d2c74"/><stop offset="1" stop-color="#110d1f"/></radialGradient>
+                  <radialGradient id="s-a" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#c4b5fd"/><stop offset="1" stop-color="#3b2a6b"/></radialGradient>
+                  <radialGradient id="s-b" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#bfdbfe"/><stop offset=".35" stop-color="#3b5bb5"/><stop offset="1" stop-color="#0f1630"/></radialGradient>
+                  <radialGradient id="s-c" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#8a849c"/><stop offset="1" stop-color="#1b1824"/></radialGradient>
+                </defs>
+                <circle cx="140" cy="122" r="80" fill="url(#s-ball)" class="art-line"/>
+                <path d="M92 108c18-26 52-34 80-20 10 5 12 16 2 20-24 8-50 10-74 18-10 3-14-8-8-18z" fill="#c4b5fd" opacity=".22"/>
+                <path class="art-wire" d="M98 116c22-14 52-20 76-14"/>
+                <g class="art-brush"><circle cx="160" cy="100" r="30"/><circle cx="160" cy="100" r="7" class="art-brush-core"/></g>
+                <g><circle cx="292" cy="62" r="20" fill="url(#s-a)"/><circle cx="292" cy="122" r="20" fill="url(#s-b)"/><circle cx="292" cy="182" r="20" fill="url(#s-c)"/></g>
+                <path class="art-dash" d="M262 40v164"/>
+                <g class="art-label" text-anchor="end"><text x="256" y="66">MATTE</text><text x="256" y="126">METAL</text><text x="256" y="186">GLOSS</text></g>
+              </svg>
+            </figure>
+          </article>
+
+          <article class="feature feature-wide feature-opt reveal">
+            <div class="feature-body">
+              <div class="feature-meta"><span class="feature-index">03</span><span class="status status-planned">Planned</span></div>
+              <h3 class="feature-title">NOVA Optimise</h3>
+              <p>Planned mesh analysis and performance optimisation tools — to see where complexity lives in a model and reduce it without losing the shape you designed.</p>
+              <ul class="feature-points">
+                <li>Mesh analysis &amp; density insights <em>(planned)</em></li>
+                <li>Guided polygon reduction <em>(planned)</em></li>
+                <li>Performance checks before export <em>(planned)</em></li>
+              </ul>
+            </div>
+            <figure class="feature-art" aria-hidden="true">
+              <svg viewBox="0 0 520 300">
+                <defs>
+                  <pattern id="o-dense" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M0 0h14v14M0 0l14 14" fill="none" stroke="#a78bfa" stroke-opacity=".55" stroke-width=".8"/></pattern>
+                  <pattern id="o-light" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M0 0h38v38M0 0l38 38" fill="none" stroke="#93c5fd" stroke-opacity=".7" stroke-width="1"/></pattern>
+                  <radialGradient id="o-shade" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#4c3a8f" stop-opacity=".7"/><stop offset="1" stop-color="#120e22" stop-opacity=".3"/></radialGradient>
+                  <clipPath id="o-clip-a"><circle cx="130" cy="140" r="82"/></clipPath>
+                  <clipPath id="o-clip-b"><circle cx="390" cy="140" r="82"/></clipPath>
+                </defs>
+                <circle cx="130" cy="140" r="82" fill="url(#o-shade)"/>
+                <rect x="40" y="50" width="180" height="180" fill="url(#o-dense)" clip-path="url(#o-clip-a)"/>
+                <circle cx="130" cy="140" r="82" class="art-line" fill="none"/>
+                <circle cx="96" cy="112" r="26" fill="#f472b6" opacity=".14"/>
+                <circle cx="390" cy="140" r="82" fill="url(#o-shade)"/>
+                <rect x="300" y="50" width="180" height="180" fill="url(#o-light)" clip-path="url(#o-clip-b)"/>
+                <circle cx="390" cy="140" r="82" class="art-line" fill="none"/>
+                <g class="art-arrow"><path d="M232 140h56"/><path d="m280 133 9 7-9 7"/></g>
+                <g class="art-label"><text x="130" y="258" text-anchor="middle">BEFORE · HIGH DENSITY</text><text x="390" y="258" text-anchor="middle">AFTER · REDUCED</text><text x="260" y="124" text-anchor="middle">ANALYSE</text></g>
+                <g class="art-meter"><rect x="60" y="276" width="140" height="4" rx="2"/><rect x="60" y="276" width="128" height="4" rx="2" class="art-meter-fill art-meter-hot"/><rect x="320" y="276" width="140" height="4" rx="2"/><rect x="320" y="276" width="44" height="4" rx="2" class="art-meter-fill"/></g>
+              </svg>
+              <figcaption class="art-caption">Illustrative example</figcaption>
+            </figure>
+          </article>
+          <article class="feature feature-ext reveal">
+            <div class="feature-body">
+              <div class="feature-meta"><span class="feature-index">04</span><span class="status status-future">Future</span></div>
+              <h3 class="feature-title">Extensions</h3>
+              <p>A future ecosystem for additional tools, brushes and community-made extensions that plug straight into the studio.</p>
+            </div>
+            <figure class="feature-art" aria-hidden="true">
+              <svg viewBox="0 0 360 240">
+                <g class="art-dash"><path d="M180 120H86M180 120h94M180 120V44M180 120v76"/></g>
+                <path class="art-line art-core" d="m180 92 24 14v28l-24 14-24-14v-28z"/>
+                <path class="art-select" d="m180 106 10 6v12l-10 6-10-6v-12z"/>
+                <g class="art-tile"><rect x="52" y="96" width="48" height="48" rx="6"/><rect x="250" y="96" width="48" height="48" rx="6"/><rect x="156" y="12" width="48" height="48" rx="6"/></g>
+                <rect class="art-tile-empty" x="156" y="180" width="48" height="48" rx="6"/>
+                <g class="art-glyph">
+                  <path d="M66 130c6-2 10-8 14-14l8-8 4 4-8 8c-6 4-12 8-14 14z"/>
+                  <path d="M262 110h8v8h-8zM280 122h8v8h-8zM270 114l10 10"/>
+                  <path d="M172 28l16 16M188 28l-16 16"/>
+                  <path class="art-glyph-soft" d="M180 196v16M172 204h16"/>
+                </g>
+                <g class="art-label"><text x="76" y="164" text-anchor="middle">BRUSH</text><text x="274" y="164" text-anchor="middle">NODES</text><text x="236" y="210">YOURS</text></g>
+              </svg>
+            </figure>
+          </article>
+
+        </div>
+
+        <p class="section-note">Only the modelling foundation is in active development today. Everything else on this page describes planned or future functionality and may change.</p>
       </div>
-      <p class="section-footnote">Features shown are planned concepts, not a claim that they are available today.</p>
     </section>
-    <section class="manifesto" id="about"><div class="manifesto-inner"><div class="manifesto-symbol">✳</div><div class="eyebrow">THE NOVA PRINCIPLE</div><h2>Powerful doesn't have to mean<br><span class="gradient-text">complicated.</span></h2><p>NOVA aims to give beginners a friendly starting point and give experienced creators room to go deeper — without putting essential creative tools behind a paywall.</p><div class="principles"><div><span>01</span><b>Approachable</b><small>Clear tools. Helpful guidance.</small></div><div><span>02</span><b>Capable</b><small>Room to grow your skills.</small></div><div><span>03</span><b>Accessible</b><small>Core features planned free.</small></div></div></div></section>
-    <section class="roadmap section-wrap" id="roadmap"><div class="eyebrow">THE JOURNEY</div><div class="section-heading roadmap-heading"><h2>One step at<br>a time.</h2><p>NOVA is in early development. The roadmap will evolve as prototypes are tested and improved.</p></div><div class="roadmap-list"><div class="roadmap-item roadmap-active"><div class="roadmap-marker"><span></span></div><div class="roadmap-meta">PHASE 01 <span class="roadmap-status">IN PROGRESS</span></div><div class="roadmap-content"><h3>Build the foundation</h3><p>Viewport navigation, basic shapes, object selection and transforms.</p></div><span class="roadmap-symbol">↗</span></div><div class="roadmap-item"><div class="roadmap-marker"><span></span></div><div class="roadmap-meta">PHASE 02 <span>PLANNED</span></div><div class="roadmap-content"><h3>Create a real workflow</h3><p>Scene hierarchy, object settings, project saving and undo/redo.</p></div><span class="roadmap-symbol">＋</span></div><div class="roadmap-item"><div class="roadmap-marker"><span></span></div><div class="roadmap-meta">PHASE 03 <span>PLANNED</span></div><div class="roadmap-content"><h3>Make, share, improve</h3><p>Core modelling operations, tested import/export and performance tools.</p></div><span class="roadmap-symbol">＋</span></div><div class="roadmap-item"><div class="roadmap-marker"><span></span></div><div class="roadmap-meta">PHASE 04 <span>FUTURE</span></div><div class="roadmap-content"><h3>Expand the studio</h3><p>Explore sculpting, texture painting and community extensions.</p></div><span class="roadmap-symbol">＋</span></div></div></section>
-    <section class="updates-section" id="updates"><div class="updates-glow"></div><div class="updates-content"><div class="eyebrow"><span class="status-dot"></span> FOLLOW THE BUILD</div><h2>Be there from<br><span class="gradient-text">the beginning.</span></h2><p>Want to follow NOVA's progress? Development updates will be shared here as the project takes shape.</p><a class="button button-primary" href="https://github.com/pcbuilding4ever-blip/Nova-website" target="_blank" rel="noopener noreferrer">Follow the website on GitHub <span aria-hidden="true">↗</span></a><div class="updates-small">No download yet — NOVA is still being built.</div></div><div class="updates-orb" aria-hidden="true"><div class="orb-ring"></div><div class="orb-core"></div><span>✦</span></div></section>
+
+    <!-- ============ Philosophy ============ -->
+    <section class="section philosophy" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="philosophy-intro">
+          <p class="eyebrow">Philosophy</p>
+          <h2 class="section-title" id="about-title">Easy to start.<br><span class="text-muted">Hard to outgrow.</span></h2>
+          <p class="philosophy-lede">Most 3D software makes you choose between friendly and capable. NOVA is being built on the belief that you shouldn't have to — and that the essentials of creating in 3D should be open to everyone.</p>
+        </div>
+        <ol class="principles">
+          <li class="principle reveal">
+            <svg class="principle-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 40h12V30h12V20h12V8"/><circle cx="42" cy="8" r="2.5"/></svg>
+            <span class="principle-index">01</span>
+            <h3>Approachable for beginners</h3>
+            <p>Clear tools, sensible defaults and helpful guidance for anyone opening a 3D application for the first time.</p>
+          </li>
+          <li class="principle reveal">
+            <svg class="principle-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6 42 16 24 26 6 16z"/><path d="m6 24 18 10 18-10M6 32l18 10 18-10"/></svg>
+            <span class="principle-index">02</span>
+            <h3>Powerful enough to grow with you</h3>
+            <p>Depth that reveals itself as your skills develop, so experienced creators have room to work without being boxed in.</p>
+          </li>
+          <li class="principle reveal">
+            <svg class="principle-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="22" width="30" height="20" rx="3"/><path d="M16 22v-6a8 8 0 0 1 15.5-2.8"/><path d="M24 30v4"/></svg>
+            <span class="principle-index">03</span>
+            <h3>Core features intended to stay free</h3>
+            <p>The core creative toolset is intended to remain free — no paywall between you and the essentials of making things in 3D.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Roadmap ============ -->
+    <section class="section roadmap" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow">Development roadmap</p>
+            <h2 class="section-title" id="roadmap-title">Built in the open,<br class="br-desktop"> one phase at a time.</h2>
+          </div>
+          <div class="section-head-aside">
+            <p>NOVA is in early development. Phase 1 is underway; every later phase is a plan that will evolve as prototypes are tested and improved.</p>
+          </div>
+        </header>
+
+        <ol class="timeline">
+          <li class="phase is-current reveal">
+            <div class="phase-node" aria-hidden="true"><span></span></div>
+            <div class="phase-head"><span class="phase-label">Phase 1</span><span class="status status-active">In development</span></div>
+            <h3>Foundation</h3>
+            <p>Viewport, primitives, selection and transforms.</p>
+          </li>
+          <li class="phase reveal">
+            <div class="phase-node" aria-hidden="true"><span></span></div>
+            <div class="phase-head"><span class="phase-label">Phase 2</span><span class="status status-planned">Planned</span></div>
+            <h3>Workflow</h3>
+            <p>Scene hierarchy, inspector, saving and undo/redo.</p>
+          </li>
+          <li class="phase reveal">
+            <div class="phase-node" aria-hidden="true"><span></span></div>
+            <div class="phase-head"><span class="phase-label">Phase 3</span><span class="status status-planned">Planned</span></div>
+            <h3>Core Creation</h3>
+            <p>Modelling tools, materials and tested import/export.</p>
+          </li>
+          <li class="phase reveal">
+            <div class="phase-node" aria-hidden="true"><span></span></div>
+            <div class="phase-head"><span class="phase-label">Phase 4</span><span class="status status-planned">Planned</span></div>
+            <h3>Advanced Tools</h3>
+            <p>Optimisation, sculpting and texture painting.</p>
+          </li>
+          <li class="phase reveal">
+            <div class="phase-node" aria-hidden="true"><span></span></div>
+            <div class="phase-head"><span class="phase-label">Future</span><span class="status status-future">Future</span></div>
+            <h3>Extensions</h3>
+            <p>Plugin support and creator tools.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Development updates ============ -->
+    <section class="section updates" id="updates" aria-labelledby="updates-title">
+      <div class="container">
+        <div class="updates-panel">
+          <div class="updates-glow" aria-hidden="true"></div>
+          <div class="updates-copy">
+            <p class="badge"><span class="badge-dot" aria-hidden="true"></span>Follow the build</p>
+            <h2 class="section-title" id="updates-title">Be there from<br><span class="text-gradient">the first vertex.</span></h2>
+            <p>NOVA is being developed in public. Follow the project on GitHub to watch progress, see what changes and be first to know when there is something to try.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://github.com/pcbuilding4ever-blip/Nova-website" target="_blank" rel="noopener noreferrer">
+                <svg class="button-icon button-icon-lead" viewBox="0 0 16 16" aria-hidden="true"><path class="fill" d="M8 .3a7.7 7.7 0 0 0-2.4 15c.4.1.5-.2.5-.4v-1.4c-2.1.5-2.6-1-2.6-1-.4-.9-.9-1.1-.9-1.1-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.8.8 2.3.7 0-.5.3-.9.5-1.1-1.7-.2-3.5-.9-3.5-3.8 0-.8.3-1.5.8-2.1-.1-.2-.3-1 .1-2 0 0 .6-.2 2.1.8a7.3 7.3 0 0 1 3.9 0c1.5-1 2.1-.8 2.1-.8.4 1 .2 1.8.1 2 .5.6.8 1.3.8 2.1 0 3-1.8 3.6-3.5 3.8.3.2.5.7.5 1.4v2.1c0 .2.1.5.6.4A7.7 7.7 0 0 0 8 .3Z"/></svg>
+                Follow on GitHub<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+              <a class="button button-secondary" href="#roadmap">View the roadmap</a>
+            </div>
+          </div>
+          <dl class="status-card">
+            <div><dt>Current stage</dt><dd>Phase 1 — Foundation <span class="status status-active">In development</span></dd></div>
+            <div><dt>Platform</dt><dd>Windows first</dd></div>
+            <div><dt>Pricing</dt><dd>Core features intended to stay free</dd></div>
+            <div><dt>Public download</dt><dd>Not available yet</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 3.5 36.5 13v14L20 36.5 3.5 27V13L20 3.5Z"/><path d="m20 10 9 5.2v9.6L20 30l-9-5.2v-9.6L20 10Z"/></svg></span><span class="brand-name">NOVA<span class="brand-sub">3D CREATION STUDIO</span></span></a><span class="footer-note">Made for the things you imagine.</span><div class="footer-links"><a href="#features">Features</a><a href="#roadmap">Roadmap</a><a href="https://github.com/pcbuilding4ever-blip/Nova-website" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><div class="copyright">© <span id="year"></span> NOVA. An independent project in development.</div></footer>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="#top" aria-label="NOVA 3D Creation Studio — back to top">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 34 12v16L20 36 6 28V12L20 4Z"/><path class="brand-mark-core" d="M20 12.5 27 16.5v8L20 28.5l-7-4v-8L20 12.5Z"/><path d="M20 4v8.5M34 12l-7 4.5M34 28l-7-3.5M20 36v-7.5M6 28l7-3.5M6 12l7 4.5"/></svg>
+          <span class="brand-text">NOVA<span class="brand-sub">3D Creation Studio</span></span>
+        </a>
+        <p>A free 3D creation studio in development, for beginners and experienced creators alike. Create anything. Optimise everything.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <p class="footer-heading">Explore</p>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#updates">Development Updates</a></li>
+        </ul>
+      </nav>
+      <div class="footer-nav">
+        <p class="footer-heading">Project</p>
+        <ul>
+          <li><a href="https://github.com/pcbuilding4ever-blip/Nova-website" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span> <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <p>© <span data-year>2026</span> NOVA. An independent project in development.</p>
+      <p>No public download is available yet.</p>
+    </div>
+  </footer>
 </body>
 </html>
