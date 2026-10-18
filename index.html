@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0a12">
+  <meta name="description" content="NOVA is a free 3D creation studio for modelling, sculpting and optimising your ideas. Windows-first and built for creators.">
+  <title>NOVA — 3D Creation Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="NOVA home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 3.5 36.5 13v14L20 36.5 3.5 27V13L20 3.5Z"/><path d="m20 10 9 5.2v9.6L20 30l-9-5.2v-9.6L20 10Z"/><path d="M20 3.5V10m16.5 3L29 15.2M36.5 27 29 24.8M20 36.5V30M3.5 27l7.5-2.2M3.5 13l7.5 2.2"/></svg></span>
+      <span class="brand-name">NOVA<span class="brand-sub">3D CREATION STUDIO</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#features">Features</a><a href="#roadmap">Roadmap</a><a href="#about">About</a>
+      <a class="nav-cta" href="#updates">Get updates <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="home">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> A NEW CREATIVE TOOL IS TAKING SHAPE</div>
+        <h1>Your ideas.<br><span class="gradient-text">Without limits.</span></h1>
+        <p class="hero-lede">A free 3D creation studio for making, shaping and optimising the things you imagine.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#updates">Follow development <span aria-hidden="true">↗</span></a>
+          <a class="button button-quiet" href="#features"><span class="play-icon" aria-hidden="true">↓</span> Explore NOVA</a>
+        </div>
+        <div class="hero-note"><span class="tiny-star">✦</span> Windows first <span class="note-divider">/</span> Core features planned to stay free</div>
+      </div>
+      <div class="hero-art" aria-label="Abstract 3D geometric shapes in a purple-lit studio">
+        <div class="art-grid"></div><div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div>
+        <div class="floating-label label-top"><span class="label-dot"></span> CREATIVE MODE <b>01</b></div>
+        <div class="shape shape-cube"><span></span></div>
+        <div class="shape shape-sphere"></div>
+        <div class="shape shape-ring"></div>
+        <div class="shape shape-crystal"></div>
+        <div class="art-cross cross-one">+</div><div class="art-cross cross-two">✳</div>
+        <div class="floating-label label-bottom"><span class="mini-bars"><i></i><i></i><i></i><i></i></span> BUILT FOR YOUR WORKFLOW</div>
+      </div>
+      <div class="hero-scroll"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+    <section class="ticker" aria-label="NOVA focus areas"><div class="ticker-track"><span>MODELLING</span><i>✦</i><span>SCULPTING</span><i>✦</i><span>OPTIMISATION</span><i>✦</i><span>CREATIVE FREEDOM</span><i>✦</i><span>MODELLING</span><i>✦</i><span>SCULPTING</span><i>✦</i><span>OPTIMISATION</span><i>✦</i><span>CREATIVE FREEDOM</span><i>✦</i></div></section>
+    <section class="features section-wrap" id="features">
+      <div class="section-heading"><div><div class="eyebrow">THE CREATIVE TOOLKIT</div><h2>Big ideas need<br><span class="muted-heading">room to grow.</span></h2></div><p>NOVA is being planned around a simple idea: powerful tools should feel approachable, and the essentials should be available to everyone.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card feature-main"><div class="card-top"><span class="feature-number">01 / CREATE</span><span class="feature-icon">◇</span></div><div class="mini-viewport"><div class="viewport-axis axis-x"></div><div class="viewport-axis axis-y"></div><div class="mini-object"></div><div class="mini-cursor"></div></div><h3>Model your world</h3><p>Start with simple shapes, then build toward detailed hard-surface and organic creations.</p><span class="card-tag">MODELLING · EDITING</span></article>
+        <article class="feature-card"><div class="card-top"><span class="feature-number">02 / REFINE</span><span class="feature-icon">✳</span></div><div class="card-visual sculpt-visual"><div class="sculpt-sphere"></div><span class="visual-spark">✦</span></div><h3>Shape every detail</h3><p>Planned sculpting and material tools to help turn rough ideas into finished work.</p><span class="card-tag">SCULPT · MATERIALS</span></article>
+        <article class="feature-card"><div class="card-top"><span class="feature-number">03 / OPTIMISE</span><span class="feature-icon">⌁</span></div><div class="card-visual graph-visual"><div class="graph-line"></div><div class="graph-stats"><span>POLY COUNT</span><b>INSIGHTS</b></div><div class="graph-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><h3>Work smarter</h3><p>Understand mesh complexity and explore ways to improve performance without losing control.</p><span class="card-tag">MESH ANALYSIS · WORKFLOW</span></article>
+        <article class="feature-card"><div class="card-top"><span class="feature-number">04 / EXTEND</span><span class="feature-icon">⌘</span></div><div class="card-visual extension-visual"><div class="extension-tile tile-a">N</div><div class="extension-tile tile-b">✦</div><div class="extension-tile tile-c">＋</div></div><h3>Make it your own</h3><p>A future extension ecosystem could bring in new tools, brushes and creator-made add-ons.</p><span class="card-tag">EXTENSIONS · COMMUNITY</span></article>
+      </div>
+      <p class="section-footnote">Features shown are planned concepts, not a claim that they are available today.</p>
+    </section>
+    <section class="manifesto" id="about"><div class="manifesto-inner"><div class="manifesto-symbol">✳</div><div class="eyebrow">THE NOVA PRINCIPLE</div><h2>Powerful doesn't have to mean<br><span class="gradient-text">complicated.</span></h2><p>NOVA aims to give beginners a friendly starting point and give experienced creators room to go deeper — without putting essential creative tools behind a paywall.</p><div class="principles"><div><span>01</span><b>Approachable</b><small>Clear tools. Helpful guidance.</small></div><div><span>02</span><b>Capable</b><small>Room to grow your skills.</small></div><div><span>03</span><b>Accessible</b><small>Core features planned free.</small></div></div></div></section>
+    <section class="roadmap section-wrap" id="roadmap"><div class="eyebrow">THE JOURNEY</div><div class="section-heading roadmap-heading"><h2>One step at<br>a time.</h2><p>NOVA is in early development. The roadmap will evolve as prototypes are tested and improved.</p></div><div class="roadmap-list"><div class="roadmap-item roadmap-active"><div class="roadmap-marker"><span></span></div><div class="roadmap-meta">PHASE 01 <span class="roadmap-status">IN PROGRESS</span></div><div class="roadmap-content"><h3>Build the foundation</h3><p>Viewport navigation, basic shapes, object selection and transforms.</p></div><span class="roadmap-symbol">↗</span></div><div class="roadmap-item"><div class="roadmap-marker"><span></span></div><div class="roadmap-meta">PHASE 02 <span>PLANNED</span></div><div class="roadmap-content"><h3>Create a real workflow</h3><p>Scene hierarchy, object settings, project saving and undo/redo.</p></div><span class="roadmap-symbol">＋</span></div><div class="roadmap-item"><div class="roadmap-marker"><span></span></div><div class="roadmap-meta">PHASE 03 <span>PLANNED</span></div><div class="roadmap-content"><h3>Make, share, improve</h3><p>Core modelling operations, tested import/export and performance tools.</p></div><span class="roadmap-symbol">＋</span></div><div class="roadmap-item"><div class="roadmap-marker"><span></span></div><div class="roadmap-meta">PHASE 04 <span>FUTURE</span></div><div class="roadmap-content"><h3>Expand the studio</h3><p>Explore sculpting, texture painting and community extensions.</p></div><span class="roadmap-symbol">＋</span></div></div></section>
+    <section class="updates-section" id="updates"><div class="updates-glow"></div><div class="updates-content"><div class="eyebrow"><span class="status-dot"></span> FOLLOW THE BUILD</div><h2>Be there from<br><span class="gradient-text">the beginning.</span></h2><p>Want to follow NOVA's progress? Development updates will be shared here as the project takes shape.</p><a class="button button-primary" href="https://github.com/pcbuilding4ever-blip/Nova-website" target="_blank" rel="noopener noreferrer">Follow the website on GitHub <span aria-hidden="true">↗</span></a><div class="updates-small">No download yet — NOVA is still being built.</div></div><div class="updates-orb" aria-hidden="true"><div class="orb-ring"></div><div class="orb-core"></div><span>✦</span></div></section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 3.5 36.5 13v14L20 36.5 3.5 27V13L20 3.5Z"/><path d="m20 10 9 5.2v9.6L20 30l-9-5.2v-9.6L20 10Z"/></svg></span><span class="brand-name">NOVA<span class="brand-sub">3D CREATION STUDIO</span></span></a><span class="footer-note">Made for the things you imagine.</span><div class="footer-links"><a href="#features">Features</a><a href="#roadmap">Roadmap</a><a href="https://github.com/pcbuilding4ever-blip/Nova-website" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><div class="copyright">© <span id="year"></span> NOVA. An independent project in development.</div></footer>
+</body>
+</html>
